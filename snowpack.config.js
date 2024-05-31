@@ -4,16 +4,7 @@ module.exports = {
     public: '/',
     src: '/_dist_',
   },
-  plugins: [
-  {
-    name: '@snowpack/plugin-react-refresh',
-    options: {
-      // Add this line to disable React Refresh in production
-      skipEnvCheck: process.env.NODE_ENV !== 'production',
-    },
-  },
-  '@snowpack/plugin-dotenv',
-],
+  plugins: ['@snowpack/plugin-react-refresh', '@snowpack/plugin-dotenv'],
   install: [
     /* ... */
   ],
