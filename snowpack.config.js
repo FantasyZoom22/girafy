@@ -4,7 +4,10 @@ module.exports = {
     public: '/',
     src: '/_dist_',
   },
-  plugins: ['@snowpack/plugin-react-refresh', '@snowpack/plugin-dotenv'],
+  plugins: [
+    process.env.NODE_ENV === 'development' && '@snowpack/plugin-react-refresh',
+    '@snowpack/plugin-dotenv'
+  ].filter(Boolean), // Filters out false values
   install: [
     /* ... */
   ],
