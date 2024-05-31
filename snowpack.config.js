@@ -4,7 +4,7 @@ module.exports = {
     public: '/',
     src: '/_dist_',
   },
-  plugins: ["@babel/plugin-transform-react-jsx", { "plugins": ["react-refresh/babel", { "skipEnvCheck": true }] }, '@snowpack/plugin-dotenv'],
+  plugins: [{ "plugins": ["react-refresh/babel", { "skipEnvCheck": true }] }, '@snowpack/plugin-dotenv'],
   install: [
     /* ... */
   ],
